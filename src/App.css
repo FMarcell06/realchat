@@ -1,0 +1,86 @@
+*{
+    margin: auto;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.container{
+    background-color: #F9FAFB;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+}
+
+.user-info{
+    background-color: gray;
+}
+
+
+.message {
+  display: flex;
+align-items: center;
+  gap: 0.75rem;
+  margin: 0.75rem 0;
+  max-width: 100%;
+}
+
+/* "Own" message variant */
+.message.own {
+  flex-direction: row-reverse;
+  text-align: right;
+
+    align-items: flex-start;
+}
+
+.message img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: auto 0;
+}
+
+/* Text bubble container */
+.message div {
+    flex: 1;
+    margin: 0;
+    max-width: fit-content;
+  background-color: var(--bubble-bg);
+  color: var(--text-primary);
+  border-radius: 1rem;
+  padding: 0.6rem 0.9rem;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+.img-border{
+    border: 1px solid purple;
+    flex-grow: 0;
+}
+
+
+/* Sender name */
+.message h5 {
+  margin: 0 0 0.25rem;
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+}
+
+/* Message text */
+.message p {
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+
+
+.message.own div {
+  background-color: var(--own-bubble-bg);
+}
+
+.chatroom{
+    background-color: #F2F3F5;
+    padding: 15px;
+    width: 50vw;
+}

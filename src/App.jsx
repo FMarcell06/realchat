@@ -18,7 +18,7 @@ function App() {
   user&& console.log(user);
 
   return (
-    <div>
+    <div className='container'>
       <h1>Realchat</h1>
       {user ? 
         <>

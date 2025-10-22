@@ -1,4 +1,4 @@
-import { addDoc, collection } from "firebase/firestore";
+import { addDoc, collection, onSnapshot, orderBy, query } from "firebase/firestore";
 import { db } from "./firebaseApp";
 
 
@@ -12,3 +12,12 @@ export const addMessage=async (message)=>{
     }
 }
 
+export const  readMessages=(setMessages)=>{
+    const collectionRef=collection(db,'messages')
+    const q=query(collectionRef,orderBy("timestamp"))
+    const unsubscribe=onSnapshot(q,(snapshot)=>{
+        const messagesArr=snapshot.docs.map((doc)=>({id:doc.id,...doc.data()}))
+        setMessages(messagesArr)
+    })
+return unsubscribe
+}
