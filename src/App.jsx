@@ -23,9 +23,11 @@ function App() {
       {user ? 
         <>
         <div className='user-info'>
-          <img src={user.photoURL} alt="image" />
-          <span>{user.displayName}</span>
-          <button onClick={()=>signOut(auth)}>Kijelentkezés</button>
+            <img src={user.photoURL} alt="image" />
+          <div>
+            <span>{user.displayName}</span>
+            <button onClick={()=>signOut(auth)}>Kijelentkezés</button>
+          </div>
         </div>
         <Chatroom user={user}/>
         </> :
