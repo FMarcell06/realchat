@@ -9,7 +9,7 @@ export const SignIn = () => {
   return (
     <div className='signin'>
         <p>Jelentkezz be</p>
-        <button onClick={handleSignIn}>Bejelentkezés Google fiókkal</button>
+        <button className='logInBtn' onClick={handleSignIn}>Bejelentkezés Google fiókkal</button>
     </div>
   )
 }

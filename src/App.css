@@ -96,6 +96,7 @@ align-items: center;
     height: 50px;
     max-width: 500px;
     margin-top: 20px;
+
 }
 
 .msgType form{
@@ -167,6 +168,26 @@ align-items: center;
   background-color: #f53b3b;
   transition: 0.15s;
   cursor: pointer;
+}
+
+.logInBtn{
+    background-color: #65a30d;
+  border: none;
+  color: white;
+  border-radius: 20px;
+  padding: 7px;
+}
+
+.logInBtn:hover{
+  background-color: #8ecb2c;
+  transition: 0.05s;
+}
+
+.signin{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  gap: 1rem;
 }
 
 @media screen and (max-width:930px){
